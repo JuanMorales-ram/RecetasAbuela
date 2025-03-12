@@ -4,46 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mojarra Frita</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <h1>MANOS A LA OBRA</h1>
-    
-    <div>
-        <div>
-            <img src="mojarra.jpg" alt="Mojarra Frita">
+    <header>
+        <button class="btn-back">⬅</button>
+        <h1>MANOS A LA OBRA</h1>
+        <button class="btn-like">👍</button>
+    </header>
+
+    <main>
+        <section class="left">
+            <div class="recipe-image">
+                <img src="mojarra.jpg" alt="Mojarra Frita">
+                <button class="play-btn">▶</button>
+            </div>
             <h2>MOJARRA FRITA</h2>
-        </div>
-        
-        <div>
-            <h3>Ingredientes:</h3>
-            <ul>
-                <li>1 mojarra fresca (500 g)</li>
-                <li>2 dientes de ajo (machacados)</li>
-                <li>1 limón (su jugo)</li>
-                <li>Sal y pimienta al gusto</li>
-                <li>1 taza de harina de trigo (opcional)</li>
-                <li>Aceite vegetal para freír</li>
-            </ul>
+            <button class="btn-recipes">Otras Recetas</button>
+            <div class="other-recipes">
+                <img src="receta1.jpg" alt="Receta 1">
+                <img src="receta2.jpg" alt="Receta 2">
+                <img src="receta3.jpg" alt="Receta 3">
+            </div>
+        </section>
 
-            <h3>Información adicional:</h3>
-            <p>
-                <strong>Tiempo total:</strong> Aproximadamente 40 minutos (incluyendo marinado).<br>
-                <strong>Consejo del chef:</strong> Usa una mojarra fresca y seca antes de freír para evitar que el aceite salte.<br>
-                <strong>Opciones de presentación:</strong> Acompaña con rodajas de limón o perejil fresco.
-            </p>
-        </div>
-    </div>
-
-    <h3>Calificación:</h3>
-    <p>★★★☆☆</p>
-
-    <h3>Otras Recetas</h3>
-    <div>
-        <img src="receta1.jpg" alt="Receta 1">
-        <img src="receta2.jpg" alt="Receta 2">
-        <img src="receta3.jpg" alt="Receta 3">
-    </div>
+        <section class="right">
+            <div class="ingredients">
+                <h3>Ingredientes:</h3>
+                <ul>
+                    <li>1 mojarra fresca (alrededor de 500 g)</li>
+                    <li>2 dientes de ajo (machacados)</li>
+                    <li>1 limón (su jugo)</li>
+                    <li>Sal al gusto</li>
+                    <li>Pimienta al gusto</li>
+                    <li>1 taza de harina de trigo (opcional, para empanizar)</li>
+                    <li>Aceite vegetal para freír</li>
+                </ul>
+            </div>
+            <div class="info">
+                <h3>Información adicional:</h3>
+                <p><strong>Tiempo total:</strong> Aproximadamente 40 minutos (incluyendo el tiempo de marinado).</p>
+                <p><strong>Consejo del chef:</strong> Asegúrate de usar una mojarra fresca y seca antes de freír para evitar que el aceite salte.</p>
+                <p><strong>Opciones de presentación:</strong> Puedes decorarla con rodajas de limón o una ramita de perejil fresco para darle un toque especial.</p>
+            </div>
+            <div class="rating">
+                <span>⭐</span>
+                <span>⭐</span>
+                <span>⭐</span>
+                <span>⭐</span>
+                <span>☆</span>
+            </div>
+        </section>
+    </main>
 
 </body>
 </html>
