@@ -1,92 +1,64 @@
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recetas de la Abuela</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f3f3f3;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-        }
-        header {
-            background-color: #d9a066;
-            padding: 20px;
-            font-size: 24px;
-            font-weight: bold;
-        }
-        .banner {
-            background-color: #ccc;
-            height: 150px;
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 18px;
-            margin: 10px;
-        }
-        .mensaje {
-            position: absolute;
-            bottom: 10px;
-            right: 10px;
-            background: rgba(255, 255, 255, 0.8);
-            padding: 5px 10px;
-            font-size: 14px;
-            border-radius: 5px;
-        }
-        .categorias {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
-            padding: 20px;
-        }
-        .categoria {
-            width: 80px;
-            height: 80px;
-            background-color: #bbb;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 14px;
-        }
-        .boton {
-            background-color: #8b5e3c;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            margin: 10px;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-    </style>
 </head>
 <body>
+    <!-- Logo a la derecha y título a la izquierda (con tabla) -->
+    <table width="100%">
+        <tr>
+            <td><h1>RECETAS DE LA ABUELA</h1></td>
+            <td align="right"><img src="imagenes/abuela.png" alt="Logo de la abuela" width="100"></td>
+        </tr>
+    </table>
 
-    <header>Recetas de la Abuela</header>
+    <!-- Menú de navegación -->
+    <nav>
+        <ul>
+            <li>RECETAS</li>
+            <li>TENDENCIAS</li>
+            <li>COMUNIDAD</li>
+            <li>SOBRE NOSOTROS</li>
+            <li>CONTACTANOS</li>
+        </ul>
+    </nav>
+   <!-- Categorías de recetas con imágenes -->
+   <div>
+    <h2>POSTRES</h2>
+    <img src="imagenes/1ER_CIRCULO_POSTRES.jpg" alt="los mejores POSTRES" title="los mejores POSTRES de la abuela">
+    
+    <h2>SOPAS</h2>
+    <img src="imagenes/2DO_CIRCULO_SOPAS.jpg" alt="las mejores sopas" title="¡Las sopas más deliciosas de la abuela!">
+    
+    <h2>CANGREJOS</h2>
+    <img src="imagenes/3ER_CIRCULO_CANGREJOS.jpg" alt="los mejores cangrejos" title="los mejores cangrejos de la abuela">
+    
+    <h2>PINCHOS</h2>
+    <img src="imagenes/4TO_CIRCULO_PINCHOS.jpg" alt="los mejores PINCHOS" title="los mejores pinchitos de la abuela">
+    
+    <h2>HAMBURGUESAS</h2>
+    <img src="imagenes/5TO_CIRCULO_HAMBURGUESA.jpg" alt="las mejores HAMBURGUESAS" title="las mejores HAMBURGUESAS de la abuela">
+    
+    <h2>BATIDOS</h2>
+    <img src="imagenes/6TO_CIRCULO_BATIDOS.jpg" alt="los mejores BATIDOS" title="los mejores BATIDOS de la abuela">
+    
+    <h2>CAFES</h2>
+    <img src="imagenes/7MO_CIRCULO_CAFES.jpg" alt="los mejores CAFES" title="Los mejores Cafés de la abuela">
+    
+    <h2>COCTELES</h2>
+    <img src="imagenes/8VO_CIRCULO_COCTELES.jpg" alt="los mejores COCTELES" title="los mejores COCTELES de la abuela">
 
-    <div class="banner">
-        <div class="mensaje">Porque todos merecemos cosas únicas</div>
+    <div>
+        
+        <img src="imagenes/salad-8274421_1280.jpg" alt="Receta 1" width="32%">
+        
+        <img src="imagenes/plata_pasta.jpg" alt="Receta 2" width="32%">
+        
+        <img src="imagenes/carne.JPG" alt="Receta 3" width="32%">
     </div>
+</div>
 
-    <section>
-        <h2>Tipo de platillo</h2>
-        <div class="categorias">
-            <div class="categoria">Meriendas</div>
-            <div class="categoria">Desayunos</div>
-            <div class="categoria">Recetas</div>
-            <div class="categoria">Almuerzos</div>
-            <div class="categoria">Comidas</div>
-            <div class="categoria">Postres</div>
-            <div class="categoria">Bebidas</div>
-        </div>
-    </section>
-
-    <button class="boton">Explorar</button>
-    <button class="boton">Explorar Más</button>
-
+    <p>LA ABULTA SIEMPRE TIENE LAS MEJORES RECETAS</p>
 </body>
 </html>
