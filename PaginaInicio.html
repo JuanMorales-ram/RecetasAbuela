@@ -2,63 +2,104 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recetas de la Abuela</title>
+    <link rel="stylesheet" href="inicio.css">
 </head>
 <body>
     <!-- Logo a la derecha y título a la izquierda (con tabla) -->
-    <table width="100%">
+    <table class="header-table">
         <tr>
-            <td><h1>RECETAS DE LA ABUELA</h1></td>
-            <td align="right"><img src="imagenes/abuela.png" alt="Logo de la abuela" width="100"></td>
+            <td><h1 class="header-title">RECETAS DE LA ABUELA</h1></td>
+            <td><img class="header-logo" src="imagenes/abuela.png" alt="Logo de la abuela"></td>
         </tr>
     </table>
 
     <!-- Menú de navegación -->
     <nav>
         <ul>
-            <li>RECETAS</li>
-            <li>TENDENCIAS</li>
-            <li>COMUNIDAD</li>
-            <li>SOBRE NOSOTROS</li>
-            <li>CONTACTANOS</li>
+            <li> <b>RECETAS </b></li>
+            <li><b>TENDENCIAS </b></li>
+            <li><b>COMUNIDAD </b></li>
+            <li><b> SOBRE NOSOTROS</b></li>
+            <li><b>CONTACTANOS</b></li>
         </ul>
     </nav>
-   <!-- Categorías de recetas con imágenes -->
-   <div>
-    <h2>POSTRES</h2>
-    <img src="imagenes/1ER_CIRCULO_POSTRES.jpg" alt="los mejores POSTRES" title="los mejores POSTRES de la abuela">
-    
-    <h2>SOPAS</h2>
-    <img src="imagenes/2DO_CIRCULO_SOPAS.jpg" alt="las mejores sopas" title="¡Las sopas más deliciosas de la abuela!">
-    
-    <h2>CANGREJOS</h2>
-    <img src="imagenes/3ER_CIRCULO_CANGREJOS.jpg" alt="los mejores cangrejos" title="los mejores cangrejos de la abuela">
-    
-    <h2>PINCHOS</h2>
-    <img src="imagenes/4TO_CIRCULO_PINCHOS.jpg" alt="los mejores PINCHOS" title="los mejores pinchitos de la abuela">
-    
-    <h2>HAMBURGUESAS</h2>
-    <img src="imagenes/5TO_CIRCULO_HAMBURGUESA.jpg" alt="las mejores HAMBURGUESAS" title="las mejores HAMBURGUESAS de la abuela">
-    
-    <h2>BATIDOS</h2>
-    <img src="imagenes/6TO_CIRCULO_BATIDOS.jpg" alt="los mejores BATIDOS" title="los mejores BATIDOS de la abuela">
-    
-    <h2>CAFES</h2>
-    <img src="imagenes/7MO_CIRCULO_CAFES.jpg" alt="los mejores CAFES" title="Los mejores Cafés de la abuela">
-    
-    <h2>COCTELES</h2>
-    <img src="imagenes/8VO_CIRCULO_COCTELES.jpg" alt="los mejores COCTELES" title="los mejores COCTELES de la abuela">
 
-    <div>
-        
-        <img src="imagenes/salad-8274421_1280.jpg" alt="Receta 1" width="32%">
-        
-        <img src="imagenes/plata_pasta.jpg" alt="Receta 2" width="32%">
-        
-        <img src="imagenes/carne.JPG" alt="Receta 3" width="32%">
+    <!-- Categorías de recetas en horizontal -->
+    <div class="categorias-container">
+        <div class="categoria">
+            <img src="imagenes/1ER_CIRCULO_POSTRES.jpg" alt="Postres">
+            <h2>POSTRES</h2>
+        </div>
+        <div class="categoria">
+            <img src="imagenes/2DO_CIRCULO_SOPAS.jpg" alt="Sopas">
+            <h2>SOPAS</h2>
+        </div>
+        <div class="categoria">
+            <img src="imagenes/3ER_CIRCULO_CANGREJOS.jpg" alt="Cangrejos">
+            <h2>CANGREJOS</h2>
+        </div>
+        <div class="categoria">
+            <img src="imagenes/4TO_CIRCULO_PINCHOS.jpg" alt="Pinchos">
+            <h2>PINCHOS</h2>
+        </div>
+        <div class="categoria">
+            <img src="imagenes/5TO_CIRCULO_HAMBURGUESA.jpg" alt="Hamburguesas">
+            <h2>HAMBURGUESAS</h2>
+        </div>
+        <div class="categoria">
+            <img src="imagenes/6TO_CIRCULO_BATIDOS.jpg" alt="Batidos">
+            <h2>BATIDOS</h2>
+        </div>
+        <div class="categoria">
+            <img src="imagenes/7MO_CIRCULO_CAFES.jpg" alt="Cafés">
+            <h2>CAFÉS</h2>
+        </div>
+        <div class="categoria">
+            <img src="imagenes/8VO_CIRCULO_COCTELES.jpg" alt="Cócteles">
+            <h2>CÓCTELES</h2>
+        </div>
     </div>
-</div>
 
-    <p>LA ABULTA SIEMPRE TIENE LAS MEJORES RECETAS</p>
+    <div class="carrusel">
+        <div class="carrusel-container">
+          <!-- Inputs radio para controlar las slides -->
+          <input type="radio" name="slides" id="slide1" checked>
+          <input type="radio" name="slides" id="slide2">
+          <input type="radio" name="slides" id="slide3">
+          
+          <!-- Slides del carrusel -->
+          <div class="carrusel-slides">
+            <div class="carrusel-item">
+              <img src="imagenes/salad-8274421_1280.jpg" alt="Receta 1" loading="lazy">
+            </div>
+            <div class="carrusel-item">
+              <img src="imagenes/plata_pasta.jpg" alt="Receta 2" loading="lazy">
+            </div>
+            <div class="carrusel-item">
+              <img src="imagenes/churrasco receta 3 manos a la obra.jpg" alt="Receta 3" loading="lazy">
+            </div>
+          </div>
+          
+          <!-- Controles manuales (puntos) -->
+          <div class="carrusel-dots">
+            <label for="slide1" class="carrusel-dot"></label>
+            <label for="slide2" class="carrusel-dot"></label>
+            <label for="slide3" class="carrusel-dot"></label>
+          </div>
+          
+          <!-- Flechas de navegación -->
+          <label for="slide1" class="carrusel-prev">‹</label>
+          <label for="slide2" class="carrusel-next">›</label>
+          <label for="slide3" class="carrusel-prev">‹</label>
+          <label for="slide1" class="carrusel-next">›</label>
+        </div>
+      </div>
+      <div style="display: flex; align-items: center; justify-content: center;">
+        <p class="lema" style="margin: 0;">LA ABUELA SIEMPRE TIENE LAS MEJORES RECETAS</p>
+        <img src="imagenes/emojifinal.jpg" alt="cara feliz" style="height: 40px; margin-left: 10px;">
+      </div>
+      
 </body>
 </html>
