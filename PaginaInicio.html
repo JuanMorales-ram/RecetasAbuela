@@ -1,92 +1,105 @@
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recetas de la Abuela</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f3f3f3;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-        }
-        header {
-            background-color: #d9a066;
-            padding: 20px;
-            font-size: 24px;
-            font-weight: bold;
-        }
-        .banner {
-            background-color: #ccc;
-            height: 150px;
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 18px;
-            margin: 10px;
-        }
-        .mensaje {
-            position: absolute;
-            bottom: 10px;
-            right: 10px;
-            background: rgba(255, 255, 255, 0.8);
-            padding: 5px 10px;
-            font-size: 14px;
-            border-radius: 5px;
-        }
-        .categorias {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
-            padding: 20px;
-        }
-        .categoria {
-            width: 80px;
-            height: 80px;
-            background-color: #bbb;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 14px;
-        }
-        .boton {
-            background-color: #8b5e3c;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            margin: 10px;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-    </style>
+    <link rel="stylesheet" href="inicio.css">
 </head>
 <body>
+    <!-- Logo a la derecha y título a la izquierda (con tabla) -->
+    <table class="header-table">
+        <tr>
+            <td><h1 class="header-title">RECETAS DE LA ABUELA</h1></td>
+            <td><img class="header-logo" src="imagenes/abuela.png" alt="Logo de la abuela"></td>
+        </tr>
+    </table>
 
-    <header>Recetas de la Abuela</header>
+    <!-- Menú de navegación -->
+    <nav>
+        <ul>
+            <li> <b>RECETAS </b></li>
+            <li><b>TENDENCIAS </b></li>
+            <li><b>COMUNIDAD </b></li>
+            <li><b> SOBRE NOSOTROS</b></li>
+            <li><b>CONTACTANOS</b></li>
+        </ul>
+    </nav>
 
-    <div class="banner">
-        <div class="mensaje">Porque todos merecemos cosas únicas</div>
+    <!-- Categorías de recetas en horizontal -->
+    <div class="categorias-container">
+        <div class="categoria">
+            <img src="imagenes/1ER_CIRCULO_POSTRES.jpg" alt="Postres">
+            <h2>POSTRES</h2>
+        </div>
+        <div class="categoria">
+            <img src="imagenes/2DO_CIRCULO_SOPAS.jpg" alt="Sopas">
+            <h2>SOPAS</h2>
+        </div>
+        <div class="categoria">
+            <img src="imagenes/3ER_CIRCULO_CANGREJOS.jpg" alt="Cangrejos">
+            <h2>CANGREJOS</h2>
+        </div>
+        <div class="categoria">
+            <img src="imagenes/4TO_CIRCULO_PINCHOS.jpg" alt="Pinchos">
+            <h2>PINCHOS</h2>
+        </div>
+        <div class="categoria">
+            <img src="imagenes/5TO_CIRCULO_HAMBURGUESA.jpg" alt="Hamburguesas">
+            <h2>HAMBURGUESAS</h2>
+        </div>
+        <div class="categoria">
+            <img src="imagenes/6TO_CIRCULO_BATIDOS.jpg" alt="Batidos">
+            <h2>BATIDOS</h2>
+        </div>
+        <div class="categoria">
+            <img src="imagenes/7MO_CIRCULO_CAFES.jpg" alt="Cafés">
+            <h2>CAFÉS</h2>
+        </div>
+        <div class="categoria">
+            <img src="imagenes/8VO_CIRCULO_COCTELES.jpg" alt="Cócteles">
+            <h2>CÓCTELES</h2>
+        </div>
     </div>
 
-    <section>
-        <h2>Tipo de platillo</h2>
-        <div class="categorias">
-            <div class="categoria">Meriendas</div>
-            <div class="categoria">Desayunos</div>
-            <div class="categoria">Recetas</div>
-            <div class="categoria">Almuerzos</div>
-            <div class="categoria">Comidas</div>
-            <div class="categoria">Postres</div>
-            <div class="categoria">Bebidas</div>
+    <div class="carrusel">
+        <div class="carrusel-container">
+          <!-- Inputs radio para controlar las slides -->
+          <input type="radio" name="slides" id="slide1" checked>
+          <input type="radio" name="slides" id="slide2">
+          <input type="radio" name="slides" id="slide3">
+          
+          <!-- Slides del carrusel -->
+          <div class="carrusel-slides">
+            <div class="carrusel-item">
+              <img src="imagenes/salad-8274421_1280.jpg" alt="Receta 1" loading="lazy">
+            </div>
+            <div class="carrusel-item">
+              <img src="imagenes/plata_pasta.jpg" alt="Receta 2" loading="lazy">
+            </div>
+            <div class="carrusel-item">
+              <img src="imagenes/churrasco receta 3 manos a la obra.jpg" alt="Receta 3" loading="lazy">
+            </div>
+          </div>
+          
+          <!-- Controles manuales (puntos) -->
+          <div class="carrusel-dots">
+            <label for="slide1" class="carrusel-dot"></label>
+            <label for="slide2" class="carrusel-dot"></label>
+            <label for="slide3" class="carrusel-dot"></label>
+          </div>
+          
+          <!-- Flechas de navegación -->
+          <label for="slide1" class="carrusel-prev">‹</label>
+          <label for="slide2" class="carrusel-next">›</label>
+          <label for="slide3" class="carrusel-prev">‹</label>
+          <label for="slide1" class="carrusel-next">›</label>
         </div>
-    </section>
-
-    <button class="boton">Explorar</button>
-    <button class="boton">Explorar Más</button>
-
+      </div>
+      <div style="display: flex; align-items: center; justify-content: center;">
+        <p class="lema" style="margin: 0;">LA ABUELA SIEMPRE TIENE LAS MEJORES RECETAS</p>
+        <img src="imagenes/emojifinal.jpg" alt="cara feliz" style="height: 40px; margin-left: 10px;">
+      </div>
+      
 </body>
 </html>
