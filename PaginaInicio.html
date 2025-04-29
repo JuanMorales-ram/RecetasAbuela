@@ -7,58 +7,58 @@
     <link rel="stylesheet" href="CSS/inicio.css">
 </head>
 <body>
-    
-    <table class="header-table">
-        <tr>
-            <td><h1 class="header-title">RECETAS DE LA ABUELA</h1></td>
-            <td><img class="header-logo" src="imagenes/abuela.png" alt="Logo de la abuela"></td>
-        </tr>
-    </table>
+    <!-- Cambié la tabla por un div más semántico y responsivo -->
+    <header class="header-container">
+        <div class="header-content">
+            <h1 class="header-title">RECETAS DE LA ABUELA</h1>
+            <img class="header-logo" src="imagenes/abuela.png" alt="Logo de la abuela">
+        </div>
+    </header>
 
-    <!-- Menú de navegación -->
+    <!-- Menú de navegación con botón hamburguesa para móviles -->
     <nav>
-      <ul>
-          <li><a href="paginaPasos.html"><b>RECETAS</b></a></li>
-          <li><a href="TendenciasDelaAbuela.html"><b>TENDENCIAS</b></a></li>
-          <li><a href="Losmejoresnietos.html"><b>COMUNIDAD</b></a></li>
-          <li><a href="Nosotros.html"><b>SOBRE NOSOTROS</b></a></li>
-          <li><a href="Contactanos.html"><b>CONTACTANOS</b></a></li>
-      </ul>
-  </nav>
-  
+        <button class="menu-toggle" aria-label="Abrir menú">☰</button>
+        <ul class="nav-menu">
+            <li><a href="paginaPasos.html"><b>RECETAS</b></a></li>
+            <li><a href="TendenciasDelaAbuela.html"><b>TENDENCIAS</b></a></li>
+            <li><a href="Losmejoresnietos.html"><b>COMUNIDAD</b></a></li>
+            <li><a href="Nosotros.html"><b>SOBRE NOSOTROS</b></a></li>
+            <li><a href="Contactanos.html"><b>CONTACTANOS</b></a></li>
+        </ul>
+    </nav>
 
     <!-- Categorías de recetas en horizontal -->
     <div class="categorias-container">
         <div class="categoria">
-            <img src="imagenes/1ER_CIRCULO_POSTRES.jpg" alt="Postres">
+            <img src="imagenes/1ER_CIRCULO_POSTRES.jpg" alt="Postres" loading="lazy">
             <h2>POSTRES</h2>
         </div>
         <div class="categoria">
-            <img src="imagenes/2DO_CIRCULO_SOPAS.jpg" alt="Sopas">
+            <img src="imagenes/2DO_CIRCULO_SOPAS.jpg" alt="Sopas" loading="lazy">
             <h2>SOPAS</h2>
         </div>
         <div class="categoria">
-            <img src="imagenes/3ER_CIRCULO_CANGREJOS.jpg" alt="Cangrejos">
+            <img src="imagenes/3ER_CIRCULO_CANGREJOS.jpg" alt="Cangrejos" loading="lazy">
             <h2>CANGREJOS</h2>
         </div>
         <div class="categoria">
-            <img src="imagenes/4TO_CIRCULO_PINCHOS.jpg" alt="Pinchos">
+            <img src="imagenes/4TO_CIRCULO_PINCHOS.jpg" alt="Pinchos" loading="lazy">
             <h2>PINCHOS</h2>
         </div>
         <div class="categoria">
-            <img src="imagenes/5TO_CIRCULO_HAMBURGUESA.jpg" alt="Hamburguesas">
+            <img src="imagenes/5TO_CIRCULO_HAMBURGUESA.jpg" alt="Hamburguesas" loading="lazy">
             <h2>HAMBURGUESAS</h2>
         </div>
         <div class="categoria">
-            <img src="imagenes/6TO_CIRCULO_BATIDOS.jpg" alt="Batidos">
+            <img src="imagenes/6TO_CIRCULO_BATIDOS.jpg" alt="Batidos" loading="lazy">
             <h2>BATIDOS</h2>
         </div>
         <div class="categoria">
-            <img src="imagenes/7MO_CIRCULO_CAFES.jpg" alt="Cafés">
+            <img src="imagenes/7MO_CIRCULO_CAFES.jpg" alt="Cafés" loading="lazy">
             <h2>CAFÉS</h2>
         </div>
         <div class="categoria">
-            <img src="imagenes/8VO_CIRCULO_COCTELES.jpg" alt="Cócteles">
+            <img src="imagenes/8VO_CIRCULO_COCTELES.jpg" alt="Cócteles" loading="lazy">
             <h2>CÓCTELES</h2>
         </div>
     </div>
@@ -97,10 +97,17 @@
           <label for="slide1" class="carrusel-next">›</label>
         </div>
       </div>
-      <div style="display: flex; align-items: center; justify-content: center;">
-        <p class="lema" style="margin: 0;">LA ABUELA SIEMPRE TIENE LAS MEJORES RECETAS</p>
-        <img src="imagenes/emojifinal.jpg" alt="cara feliz" style="height: 40px; margin-left: 10px;">
+      
+      <div class="lema-container">
+        <p class="lema">LA ABUELA SIEMPRE TIENE LAS MEJORES RECETAS</p>
+        <img src="imagenes/emojifinal.jpg" alt="cara feliz" class="lema-emoji">
       </div>
       
+      <script>
+        // JavaScript para el menú hamburguesa
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-menu').classList.toggle('active');
+        });
+      </script>
 </body>
 </html>

@@ -1,76 +1,110 @@
 /* Estilos generales */
+:root {
+  --color-primario: #d1c4e9;
+  --color-secundario: #ff8c00;
+  --color-fondo: #f9f9f9;
+  --color-texto: #333;
+  --color-blanco: #fff;
+  --sombra: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: 'Segoe UI', Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #d1c4e9 ; /* Cambia el color de fondo */
-  color: #333;
+  background-color: var(--color-primario);
+  color: var(--color-texto);
   line-height: 1.5;
 }
 
-/* Encabezado con título a la izquierda y logo a la derecha */
-.header-table {
+/* Encabezado */
+.header-container {
+  background-color: var(--color-blanco);
+  padding: 15px 20px;
+  display: flex;
+  justify-content: center;
+  box-shadow: var(--sombra);
+}
+
+.header-content {
   width: 100%;
-  background-color: #fff;
-  padding: 10px 20px;
-  border-collapse: collapse;
-}
-
-.header-table td:first-child {
-  width: 80%;
-  text-align: left;
-  vertical-align: middle;
-}
-
-.header-table td:last-child {
-  width: 20%;
-  text-align: right;
-  vertical-align: middle;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .header-title {
-  color: #000;
+  color: var(--color-texto);
   margin: 0;
   padding: 0;
   font-size: 2.5rem;
   font-weight: 700;
-  font-family: 'Segoe UI', Arial, sans-serif; /* Misma tipografía */
 }
 
 .header-logo {
   width: 120px;
   height: auto;
-  display: block;
-  margin-left: auto; /*  logo a la derecha */
 }
 
-/* Menú de navegación */
+/* Menú de navegación - Versión original para desktop */
 nav {
-  background-color: #fff;
-  padding: 8px 0;
+  background-color: var(--color-blanco);
+  padding: 10px 0;
+  position: relative;
+  box-shadow: var(--sombra);
 }
 
-nav ul {
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 5px 10px;
+  margin: 0 auto;
+}
+
+.nav-menu {
   list-style: none;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   display: flex;
   justify-content: center;
-  gap: 100px;
+  width: 100%;
+  max-width: 1200px;
 }
 
-nav li {
-  color: #000;
+.nav-menu li {
+  color: var(--color-texto);
   font-weight: 600;
   padding: 8px 12px;
   cursor: pointer;
-  font-size: 1.3rem; /* Tamaño de fuente más grande */
+  font-size: 1.3rem;
   transition: all 0.2s ease;
+  white-space: nowrap;
 }
 
-nav li:hover {
-  color: #ff8c00;
+.nav-menu li:hover {
+  color: var(--color-secundario);
   transform: translateY(-2px);
+}
+
+.nav-menu li a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Espaciado original del menú */
+.nav-menu li:not(:last-child) {
+  margin-right: 100px;
 }
 
 /* Categorías */
@@ -79,15 +113,17 @@ nav li:hover {
   overflow-x: auto;
   gap: 20px;
   padding: 20px;
-  background-color: #d1c4e9 ; /* Cambia el color de fondo  de las categorias*/
+  background-color: var(--color-primario);
   scrollbar-width: thin;
-  scrollbar-color: #ff8c00 #d1c4e9 ;
+  scrollbar-color: var(--color-secundario) var(--color-primario);
+  -webkit-overflow-scrolling: touch;
 }
 
 .categoria {
   min-width: 200px;
   text-align: center;
   transition: transform 0.3s ease;
+  flex: 0 0 auto;
 }
 
 .categoria:hover {
@@ -98,7 +134,7 @@ nav li:hover {
   width: 150px;
   height: 150px;
   object-fit: cover;
-  border: 5px solid #ff8c00;
+  border: 5px solid var(--color-secundario);
   border-radius: 50%;
 }
 
@@ -114,15 +150,14 @@ nav li:hover {
   margin: 40px auto;
   overflow: hidden;
   border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-  background-color: #007BFF; /* azul  */
-
+  box-shadow: var(--sombra);
+  background-color: #007BFF;
 }
 
 .carrusel-container {
   position: relative;
-  width: 100%; 
-  background-color: transparent; 
+  width: 100%;
+  padding-top: 56.25%;
 }
 
 .carrusel-container input[type="radio"] {
@@ -130,23 +165,25 @@ nav li:hover {
 }
 
 .carrusel-slides {
+  position: absolute;
+  top: 0;
+  left: 0;
   display: flex;
   width: 300%;
+  height: 100%;
   transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .carrusel-item {
   flex: 0 0 33.333%;
-  background-color: #007BFF; /* azul fuerte */
+  height: 100%;
 }
 
 .carrusel-item img {
   width: 100%;
-  height: auto;
-  max-height: 550px;
+  height: 100%;
   object-fit: cover;
   display: block;
-  border-radius: 12px; /* Igual que el carrusel */
 }
 
 /* Controles del carrusel */
@@ -173,8 +210,8 @@ nav li:hover {
 
 .carrusel-dot.active,
 .carrusel-dot:hover {
-  background-color: #ff8c00;
-  border-color: white;
+  background-color: var(--color-secundario);
+  border-color: var(--color-blanco);
 }
 
 .carrusel-prev,
@@ -184,7 +221,7 @@ nav li:hover {
   width: 50px;
   height: 50px;
   background-color: rgba(255, 140, 0, 0.8);
-  color: white;
+  color: var(--color-blanco);
   border: none;
   border-radius: 50%;
   font-size: 24px;
@@ -207,7 +244,7 @@ nav li:hover {
 
 .carrusel-prev:hover,
 .carrusel-next:hover {
-  background-color: #ff8c00;
+  background-color: var(--color-secundario);
   transform: translateY(-50%) scale(1.1);
 }
 
@@ -219,19 +256,30 @@ nav li:hover {
 #slide1:checked ~ .carrusel-dots .carrusel-dot:nth-child(1),
 #slide2:checked ~ .carrusel-dots .carrusel-dot:nth-child(2),
 #slide3:checked ~ .carrusel-dots .carrusel-dot:nth-child(3) {
-  background-color: #ff8c00;
-  border-color: white;
+  background-color: var(--color-secundario);
+  border-color: var(--color-blanco);
   transform: scale(1.2);
 }
 
 /* Lema */
+.lema-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: #ADD8E6;
+}
+
 .lema {
   text-align: center;
   font-size: 1.3rem;
   font-weight: bold;
-  padding: 20px;
-  background-color: #ADD8E6; /* Cambia el color de fondo  del lema*/
-  margin: 0;
+  margin: 0 10px;
+}
+
+.lema-emoji {
+  height: 40px;
+  margin-left: 10px;
 }
 
 /* Scrollbar */
@@ -245,18 +293,13 @@ nav li:hover {
 }
 
 .categorias-container::-webkit-scrollbar-thumb {
-  background-color: #ff8c00;
+  background-color: var(--color-secundario);
   border-radius: 10px;
 }
 
 /* Media Queries */
+/* Tablet (768px - 1024px) */
 @media (max-width: 1024px) {
-  .carrusel-item img {
-    max-height: 450px;
-  }
-}
-
-@media (max-width: 768px) {
   .header-title {
     font-size: 2rem;
   }
@@ -265,19 +308,17 @@ nav li:hover {
     width: 100px;
   }
   
-  nav ul {
-    gap: 20px;
+  .nav-menu li {
+    font-size: 1.1rem;
+  }
+  
+  /* Ajustamos el espaciado del menú para tablet */
+  .nav-menu li:not(:last-child) {
+    margin-right: 60px;
   }
   
   .carrusel-item img {
-    max-height: 350px;
-  }
-  
-  .carrusel-prev,
-  .carrusel-next {
-    width: 40px;
-    height: 40px;
-    font-size: 20px;
+    max-height: 450px;
   }
   
   .categoria {
@@ -294,19 +335,51 @@ nav li:hover {
   }
 }
 
-@media (max-width: 480px) {
-  .header-table {
+/* Tablet pequeña (600px - 768px) */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+  
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 0;
+  }
+  
+  .nav-menu.active {
+    display: flex;
+  }
+  
+  .nav-menu li {
+    text-align: center;
+    padding: 10px;
+    font-size: 1.2rem;
+    margin-right: 0 !important;
+  }
+  
+  .carrusel-item img {
+    max-height: 350px;
+  }
+  
+  .carrusel-prev,
+  .carrusel-next {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+}
+
+/* Móvil (hasta 600px) */
+@media (max-width: 600px) {
+  .header-content {
     flex-direction: column;
     text-align: center;
   }
   
   .header-logo {
-    margin: 10px 0 0;
-  }
-  
-  nav ul {
-    flex-wrap: wrap;
-    gap: 8px;
+    margin-top: 10px;
   }
   
   .carrusel-item img {
@@ -330,5 +403,34 @@ nav li:hover {
   
   .carrusel-dots {
     bottom: 15px;
+  }
+  
+  .lema-container {
+    flex-direction: column;
+  }
+  
+  .lema-emoji {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+}
+
+/* Pantallas muy pequeñas (hasta 400px) */
+@media (max-width: 400px) {
+  .categoria {
+    min-width: 110px;
+  }
+  
+  .categoria img {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .categoria h2 {
+    font-size: 0.8rem;
+  }
+  
+  .header-title {
+    font-size: 1.5rem;
   }
 }
