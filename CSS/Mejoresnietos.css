@@ -1,0 +1,175 @@
+body {
+    font-family: 'Georgia', serif;
+    background-color: #f7f7f7; /* Cambia el color de fondo */
+    margin: 0;
+    padding: 0;
+    color: white; /* Cambia el color del texto a blanco */
+}
+
+.encabezado {
+    background-color: #ADD8E6; /* Cambia el color de fondo  del*/
+    text-align: center;
+    padding: 20px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+}
+
+.boton-regresar {
+    font-size: 2rem;       /*  tamaño del boton*/
+    cursor: pointer;
+    background-color: white; /* Cambia el color de fondo del botón */
+    color: #ADD8E6; /* Cambia el color del texto del botón */
+    padding: 8px 16px;
+    border-radius: 50px;
+    border: none;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease;
+}
+
+.boton-regresar:hover {
+    transform: scale(1.1); /* Efecto de hover para el botón */
+}
+
+.contenedor-principal {
+    display: flex;
+    max-width: 1000px;
+    margin: 40px auto;
+    gap: 30px;
+    align-items: flex-start;
+    padding: 0 20px;
+}
+
+.imagen-abuela {
+    width: 40%;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border: 4px solid #ADD8E6; /
+}
+
+.seccion-nietos {
+    width: 60%; 
+    background-color: #ADD8E6; /* Cambia el color de fondo  de los mejores nietos*/ 
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: inset 0 0 8px rgba(255, 255, 255, 0.5);
+    overflow: hidden;
+}
+
+.nietos-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+}
+
+.nietos-list-wrapper {
+    animation: scrollUp 12s linear infinite;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.nietos-list li {
+    font-size: 1.5rem;
+    padding: 15px 10px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    height: 100px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.numero {
+    font-weight: bold;
+    font-size: 2rem;
+    min-width: 30px;
+    text-align: right;
+}
+
+.avatar {
+    font-size: 2rem;
+}
+
+.nombre {
+    flex: 1;
+    text-align: left;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+@keyframes scrollUp {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-300px);
+    }
+}
+  /*responsvidad  pantallas medianas pc talbets etc*/
+   /* TABLETS (pantallas medianas) */
+@media (max-width: 1023px) {
+    .contenedor-principal {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .imagen-abuela,
+    .seccion-nietos {
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .nombre {
+        font-size: 1.4rem;
+    }
+}
+
+/* MÓVILES (pantallas pequeñas) */
+@media (max-width: 767px) {
+    .encabezado {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .boton-regresar {
+        font-size: 1.5rem;
+        padding: 6px 12px;
+    }
+
+    .imagen-abuela,
+    .seccion-nietos {
+        width: 100%;
+    }
+
+    .nietos-list li {
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+        padding: 10px;
+    }
+
+    .avatar, .numero {
+        font-size: 1.5rem;
+    }
+
+    .nombre {
+        font-size: 1.3rem;
+    }
+
+    .nietos-list-wrapper {
+        animation: none; /* Detenemos animación si se ve mal en móvil */
+        overflow-y: auto;
+        max-height: 300px;
+    }
+}
