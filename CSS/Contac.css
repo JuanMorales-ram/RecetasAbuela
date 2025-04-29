@@ -1,5 +1,5 @@
 body {
-    background-color: #A6BDF0;
+    background-color: #d1c4e9;
     font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
@@ -13,7 +13,7 @@ body {
     grid-template-columns: 1fr 1fr; /* Dos columnas para pantallas grandes */
     align-items: center;
     width: 80%;
-    background-color: #A6BDF0;
+    background-color: #d1c4e9;
     padding: 20px;
     border-radius: 10px;
     gap: 20px;

@@ -7,7 +7,7 @@ body {
 }
 
 .encabezado {
-    background-color: #ADD8E6; /* Cambia el color de fondo  del*/
+    background-color: #d1c4e9 ; /* Cambia el color de fondo  del*/
     text-align: center;
     padding: 20px;
     font-size: 1.8rem;
@@ -47,12 +47,12 @@ body {
     width: 40%;
     border-radius: 20px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    border: 4px solid #ADD8E6; /
+    border: 4px solid #d1c4e9 ; /
 }
 
 .seccion-nietos {
     width: 60%; 
-    background-color: #ADD8E6; /* Cambia el color de fondo  de los mejores nietos*/ 
+    background-color: #d1c4e9 ; /* Cambia el color de fondo  de los mejores nietos*/ 
     padding: 30px;
     border-radius: 20px;
     box-shadow: inset 0 0 8px rgba(255, 255, 255, 0.5);
@@ -82,7 +82,7 @@ body {
     align-items: center;
     gap: 20px;
     height: 100px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4); /* Cambia el color de la línea divisoria */
 }
 
 .numero {

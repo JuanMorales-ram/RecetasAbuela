@@ -3,7 +3,7 @@ body {
   font-family: 'Segoe UI', Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #ADD8;
+  background-color: #d1c4e9 ; /* Cambia el color de fondo */
   color: #333;
   line-height: 1.5;
 }
@@ -41,7 +41,7 @@ body {
   width: 120px;
   height: auto;
   display: block;
-  margin-left: auto; /* Esto fuerza el logo a la derecha */
+  margin-left: auto; /*  logo a la derecha */
 }
 
 /* Menú de navegación */
@@ -79,9 +79,9 @@ nav li:hover {
   overflow-x: auto;
   gap: 20px;
   padding: 20px;
-  background-color: #ADD8E6;
+  background-color: #d1c4e9 ; /* Cambia el color de fondo  de las categorias*/
   scrollbar-width: thin;
-  scrollbar-color: #ff8c00 #f5f5f5;
+  scrollbar-color: #ff8c00 #d1c4e9 ;
 }
 
 .categoria {
@@ -115,14 +115,14 @@ nav li:hover {
   overflow: hidden;
   border-radius: 12px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-  background-color: #007BFF; /* azul más intenso */
+  background-color: #007BFF; /* azul  */
 
 }
 
 .carrusel-container {
   position: relative;
   width: 100%; 
-  background-color: transparent; /* aseguramos que no tenga color blanco */
+  background-color: transparent; 
 }
 
 .carrusel-container input[type="radio"] {
@@ -230,7 +230,7 @@ nav li:hover {
   font-size: 1.3rem;
   font-weight: bold;
   padding: 20px;
-  background-color: #fff;
+  background-color: #ADD8E6; /* Cambia el color de fondo  del lema*/
   margin: 0;
 }
 
