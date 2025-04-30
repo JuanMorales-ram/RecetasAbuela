@@ -40,11 +40,14 @@ header {
     border-radius: 0;
 }
 
+
+/* Estilos para iconos (nuevos ajustes) */
 .icon {
     font-size: 24px;
     cursor: pointer;
-    color: white;
+    color: rgb(0, 0, 0);
 }
+
 
 /* Cuerpo principal */
 main {
@@ -54,6 +57,21 @@ main {
     padding: 20px;
     max-width: 1200px;
     margin: 0 auto;
+}
+* Estilos específicos para el botón de regreso */
+.icon.back {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    transition: transform 0.2s ease;
+}
+
+/* Efecto hover para el botón */
+.icon.back:hover {
+    transform: scale(1.1);
 }
 
 .left {
