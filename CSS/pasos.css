@@ -12,8 +12,19 @@ body {
     width: 90%;
     max-width: 900px;
     background-color: white;
-    border-radius: 10px;
+    border-radius: 15px;
     padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Recuadros de colores */
+.color-box {
+    background-color: #e8d6ff; /* Color lila claro */
+    border-radius: 12px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 /* Encabezado */
@@ -21,152 +32,196 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #b88ede;
-    padding: 15px;
-    border-radius: 10px;
-    color: black;
+    background-color: #b88ede; /* Color lila más fuerte */
+    padding: 15px 20px;
+    border-radius: 12px;
+    color: white;
     text-align: center;
     font-size: 22px;
     font-weight: bold;
+    margin-bottom: 25px;
 }
 
 .icon {
     font-size: 24px;
     cursor: pointer;
+    color: white;
 }
 
 /* Cuerpo principal */
 main {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 20px;
+    gap: 20px;
 }
 
 .left {
     flex: 1;
-    text-align: center;
-    padding: 10px;
+    min-width: 300px;
 }
 
-.card {
-    background-color: #b88ede;
-    padding: 15px;
-    border-radius: 10px;
+.right {
+    flex: 1;
+    min-width: 300px;
 }
 
+/* Imagen principal */
 .main-image {
-    position: relative;
     border-radius: 10px;
     overflow: hidden;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
 .main-image img {
     width: 100%;
-    border-radius: 10px;
+    max-height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
 }
 
-.play-button {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 40px;
-    color: white;
-    background: rgba(0, 0, 0, 0.5);
-    border-radius: 50%;
-    padding: 10px 15px;
-    cursor: pointer;
+/* Títulos */
+h1, h2, h3 {
+    color: #5a2d9a; /* Color morado oscuro */
 }
 
-h2 {
-    font-size: 20px;
-    font-weight: bold;
-    color: black;
-}
-
-.other-recipes {
-    background-color: #b88ede;
-    padding: 10px;
-    border-radius: 10px;
-    margin-top: 10px;
+.recipe-title h2 {
+    font-size: 22px;
     font-weight: bold;
     text-align: center;
+    margin: 10px 0;
+}
+
+/* Otras recetas */
+.other-recipes h3 {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 15px;
 }
 
 .gallery {
     display: flex;
     justify-content: center;
-    gap: 10px;
+    gap: 15px;
     margin-top: 10px;
 }
 
 .gallery img {
-    width: 70px;
-    height: 70px;
-    border-radius: 10px;
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 2px solid white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-/* Sección derecha */
-.right {
-    flex: 1;
-    padding: 10px;
-    min-width: 300px;
+/* Ingredientes */
+.ingredients h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #b88ede;
+    padding-bottom: 8px;
 }
 
-.content-box {
-    background-color: #b88ede;
-    padding: 15px;
-    border-radius: 10px;
-    color: black;
+.ingredients ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.ingredients li {
+    margin-bottom: 10px;
     font-size: 16px;
+    padding-left: 25px;
+    position: relative;
 }
 
-h3 {
-    margin-top: 0;
+.ingredients li:before {
+    content: "•";
+    color: #b88ede;
+    font-size: 20px;
+    position: absolute;
+    left: 0;
+    top: -2px;
+}
+
+/* Información adicional */
+.additional-info h3 {
     font-size: 18px;
     font-weight: bold;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #b88ede;
+    padding-bottom: 8px;
 }
 
-/* Pie de página */
-footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-    font-size: 22px;
-    flex-direction: column;
+.additional-info ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.additional-info li {
+    margin-bottom: 10px;
+    font-size: 15px;
+    padding-left: 25px;
+    position: relative;
+}
+
+.additional-info li:before {
+    content: "•";
+    color: #b88ede;
+    font-size: 20px;
+    position: absolute;
+    left: 0;
+    top: -2px;
+}
+
+
+
+/* Sección de valoración corregida */
+.rating {
+    text-align: center;
+    width: 100%;
+    padding: 15px 20px;
+    margin: 20px 0 0 0;
+    background-color: #e8d6ff;
+    border-radius: 0; /* Sin bordes redondeados */
+    box-sizing: border-box;
+    border-top: 1px solid #b88ede; /* Línea divisoria superior */
 }
 
 .stars {
-    color: gold;
-    letter-spacing: 3px;
-    margin-top: 10px;
-    text-align: center;
+    font-size: 24px; /* Tamaño reducido para mejor ajuste */
+    color: #ffc107;
+    letter-spacing: 8px; /* Más espacio entre estrellas */
+    margin: 5px 0;
+    display: inline-block;
+}
+
+.rating p {
+    font-size: 14px;
+    color: #666;
+    margin: 5px 0 0 0;
+    font-style: italic;
 }
 
 /* Media Queries para hacer responsivo */
-
-/* Tablets (pantallas medianas) */
-@media (max-width: 992px) {
-    body {
-        grid-template-columns: 1fr;
-        padding: 50px;
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
     }
-    .image-placeholder {
-        margin: 20px auto;
-        float: none;
+    
+    .left, .right {
+        width: 100%;
     }
-}
-
-/* Móviles (pantallas pequeñas) */
-@media (max-width: 576px) {
-    h1 {
-        font-size: 32px;
-    }
-    p {
+    
+    header {
         font-size: 18px;
+        padding: 12px 15px;
     }
-    body {
-        padding: 30px;
+    
+    .gallery img {
+        width: 70px;
+        height: 70px;
     }
 }
