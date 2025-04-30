@@ -6,6 +6,7 @@ body {
     align-items: center;
     min-height: 100vh;
     margin: 0;
+    position: relative;
 }
 
 .container {
@@ -17,10 +18,12 @@ body {
     padding: 20px;
     border-radius: 10px;
     gap: 20px;
+    position: relative;
 }
 
 .formulario {
     padding: 50px;
+    position: relative;
 }
 
 h1 {
