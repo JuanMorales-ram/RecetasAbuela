@@ -1,8 +1,37 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f8f8f8;
+    background-color: #f8f1ec;
     margin: 0;
     padding: 0;
+}
+
+/* --- NUEVOS ESTILOS PARA ORGANIZAR LA SECCIÓN SUPERIOR --- */
+.top-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f8f1ec; /* Mismo color que tu .container */
+    padding: 15px 20px;
+    position: relative;
+}
+
+/* Ajuste para el título dentro de top-section */
+.top-section .title {
+    margin: 0 auto; /* Centra el título */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: transparent; /* Elimina el fondo blanco */
+    padding: 0;
+    color: black; /* Texto blanco para contrastar con el fondo morado */
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3); /* Mejora legibilidad */
+}
+
+/* Opcional: Ajustar el botón para móviles */
+@media (max-width: 576px) {
+    .top-section .title {
+        font-size: 18px;
+    }
 }
 
 .container {
@@ -74,7 +103,7 @@ body {
     font-weight: bold;
     text-transform: uppercase;
     margin-bottom: 15px;
-    color: #333;
+    color: black;
 }
 
 .gallery {
