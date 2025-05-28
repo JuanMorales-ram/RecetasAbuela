@@ -6,54 +6,66 @@
     <link rel="stylesheet" href="CSS/Mejoresnietos.css">
 </head>
 <body>
-    <header class="encabezado">
-        <h1>LOS MEJORES NIETOS DE LA ABUELA</h1>
-        <a href="PaginaInicio.html" class="boton-regresar">↩️</a>
 
+    <!-- Encabezado y Navegación -->
+    <header class="header-container">
+        <div class="header-content">
+            <h1 class="header-title">RECETAS DE LA ABUELA</h1>
+            <img class="header-logo" src="Imagenes/abuela.png" alt="Logo de la abuela" />
+        </div>
+        <nav class="navbar">
+            <ul class="nav-list">
+                <li><a href="PaginaInicio.html">Inicio</a></li>
+                <li><a href="Nosotros.html">Nosotros</a></li>
+                <li><a href="TendenciasDeLaAbuela.html">Tendencias</a></li>
+                <li><a href="PaginaPasos.html">Pasos</a></li>
+                <li><a href="Losmejoresnietos.html">Mejores Nietos</a></li>
+                <li><a href="Contactanos.html">Contáctanos</a></li>
+            </ul>
+        </nav>
+        <div class="encabezado-secundario">
+            <h1>LOS MEJORES NIETOS DE LA ABUELA</h1>
+        </div>
     </header>
 
     <div class="contenedor-principal">
-        <!-- Imagen de la abuela a la izquierda -->
-        <img src="imagenes/COMUNIDAD_IMAGEN.jpg" alt="Imagen de la abuela" class="imagen-abuela">
+        <!-- Imagen -->
+        <div class="imagen-container">
+            <img src="imagenes/COMUNIDAD_IMAGEN.jpg" alt="Imagen de la abuela" class="imagen-abuela">
+        </div>
 
-        <!-- Sección de nietos a la derecha -->
+        <!-- Lista de nietos -->
         <div class="seccion-nietos">
             <ul class="nietos-list">
                 <div class="nietos-list-wrapper">
-                    <li>
-                        <span class="numero">1</span>
-                        <span class="avatar">🧑</span>
-                        <span class="nombre">Nicolas Rojas</span>
-                    </li>
-                    <li>
-                        <span class="numero">2</span>
-                        <span class="avatar">👩</span>
-                        <span class="nombre">Laura Peña</span>
-                    </li>
-                    <li>
-                        <span class="numero">3</span>
-                        <span class="avatar">👵</span>
-                        <span class="nombre">Camila Toro</span>
-                    </li>
-                    <!-- Duplicados para animación continua -->
-                    <li>
-                        <span class="numero">1</span>
-                        <span class="avatar">🧑</span>
-                        <span class="nombre">Nicolas Rojas</span>
-                    </li>
-                    <li>
-                        <span class="numero">2</span>
-                        <span class="avatar">👩</span>
-                        <span class="nombre">Laura Peña</span>
-                    </li>
-                    <li>
-                        <span class="numero">3</span>
-                        <span class="avatar">👵</span>
-                        <span class="nombre">Camila Toro</span>
-                    </li>
+                    <li><span class="numero">1</span><span class="avatar">🧑</span><span class="nombre">Nicolas Rojas</span></li>
+                    <li><span class="numero">2</span><span class="avatar">👩</span><span class="nombre">Laura Peña</span></li>
+                    <li><span class="numero">3</span><span class="avatar">👵</span><span class="nombre">Camila Toro</span></li>
+                    <!-- Repetición para animación -->
+                    <li><span class="numero">1</span><span class="avatar">🧑</span><span class="nombre">Nicolas Rojas</span></li>
+                    <li><span class="numero">2</span><span class="avatar">👩</span><span class="nombre">Laura Peña</span></li>
+                    <li><span class="numero">3</span><span class="avatar">👵</span><span class="nombre">Camila Toro</span></li>
                 </div>
             </ul>
         </div>
+    </div>
+
+    <!-- Validadores -->
+    <div class="validators">
+      <p>
+        <a href="https://jigsaw.w3.org/css-validator/check/referer">
+          <img style="border:0;width:88px;height:31px"
+            src="https://jigsaw.w3.org/css-validator/images/vcss"
+            alt="¡CSS Válido!" />
+        </a>
+      </p>
+      <p>
+        <a href="https://jigsaw.w3.org/css-validator/check/referer">
+          <img style="border:0;width:88px;height:31px"
+            src="https://jigsaw.w3.org/css-validator/images/vcss-blue"
+            alt="¡CSS Válido!" />
+        </a>
+      </p>
     </div>
 </body>
 </html>
