@@ -61,10 +61,10 @@ body {
 
 /* Título principal */
 .title-section {
-  background-color: #fff;
+  background-color: #9eb9f6;
   padding: 20px;
   text-align: center;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #6a1b9a;
 }
 
 .title {
@@ -72,12 +72,12 @@ body {
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: #333;
+  color: wh;
 }
 
 /* Contenido */
 .container {
-  background-color: #d1c4e9;
+  background-color: #9eb9f6;
   padding: 20px;
   max-width: 1200px;
   margin: 0 auto;
